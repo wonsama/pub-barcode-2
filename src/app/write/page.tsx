@@ -1,14 +1,15 @@
-'use client';
+"use client";
 
-import Barcode, { Renderer } from 'react-jsbarcode';
-import React, { useEffect, useRef, useState } from 'react';
+import Barcode, { Renderer } from "react-jsbarcode";
+import React, { useEffect, useRef, useState } from "react";
 
-import { ErrorBoundary } from 'next/dist/client/components/error-boundary';
+import { ErrorBoundary } from "next/dist/client/components/error-boundary";
+import Link from "next/link";
 
 export default function Home() {
   // const [barcode, setBarcode] = useState('');
   const inpBarCode = useRef<HTMLInputElement>(null);
-  const [barcode, setBarcode] = useState<string>('');
+  const [barcode, setBarcode] = useState<string>("");
   const [barcodeValid, setBarcodeValid] = useState<boolean>(false);
 
   function onUpdateBarcode() {
@@ -31,27 +32,27 @@ export default function Home() {
           <Barcode
             value={barcode}
             options={{
-              format: 'code128',
+              format: "code128",
               width: 2,
               valid: (isValid) => {
                 setBarcodeValid(isValid);
               }, //
             }}
-            renderer={'image' as Renderer}
+            renderer={"image" as Renderer}
           />
         ) : (
           <>
             <div>바코드를 입력해주세요</div>
             <Barcode
-              style={{ display: 'none' }}
+              style={{ display: "none" }}
               value={barcode}
               options={{
-                format: 'code128',
+                format: "code128",
                 valid: (isValid) => {
                   setBarcodeValid(isValid);
                 }, //
               }}
-              renderer={'image' as Renderer}
+              renderer={"image" as Renderer}
             />
           </>
         )}
@@ -61,7 +62,7 @@ export default function Home() {
         <input
           ref={inpBarCode}
           onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => {
-            if (e.key === 'Enter') {
+            if (e.key === "Enter") {
               onUpdateBarcode();
             }
           }}
@@ -75,6 +76,14 @@ export default function Home() {
           className="hover:cursor-pointer rounded-md bg-gray-300 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600"
         >
           바코드 생성
+        </div>
+      </div>
+
+      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 grid-cols-1 lg:text-center gap-4">
+        <div className="hover:cursor-pointer rounded-md bg-gray-300 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
+          <Link href="/read" replace>
+            바코드 읽기
+          </Link>
         </div>
       </div>
     </main>

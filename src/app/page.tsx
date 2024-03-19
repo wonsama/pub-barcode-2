@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -32,10 +32,14 @@ export default function Home() {
 
       <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 grid-cols-2 lg:text-center gap-4">
         <div className="hover:cursor-pointer rounded-md bg-gray-300 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
-          바코드 읽기
+          <Link href="/read" replace>
+            바코드 읽기
+          </Link>
         </div>
         <div className="hover:cursor-pointer rounded-md bg-gray-300 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-600">
-          바코드 쓰기
+          <Link href="/write" replace>
+            바코드 쓰기
+          </Link>
         </div>
       </div>
     </main>

@@ -1,0 +1,30 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #282c34;
+  display: grid;
+  grid-auto-flow: row;
+  grid-template-rows: auto auto 1fr;
+  grid-template-columns: 1fr;
+  padding: 0 24px;
+  min-height: 100vh;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  align-items: center;
+  justify-items: center;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.App-example-box {
+  max-width: 480px;
+  width: 100%;
+}
+
+.App-selected-button {
+  background: #61dafb;
+}

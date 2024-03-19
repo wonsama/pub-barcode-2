@@ -14,3 +14,4 @@ npm i react-jsbarcode
 - [React + Typescript: 인풋창 엔터이벤트 구현 종결](https://velog.io/@yena1025/React-Typescript-%EC%9D%B8%ED%92%8B%EC%B0%BD-%EC%97%94%ED%84%B0%EC%9D%B4%EB%B2%A4%ED%8A%B8-%EA%B5%AC%ED%98%84-%EC%A2%85%EA%B2%B0)
 - [github : html5-qrcode](https://github.com/mebjas/html5-qrcode)
 - [github : Html5QrcodePlugin](https://github.com/scanapp-org/html5-qrcode-react/blob/main/src/Html5QrcodePlugin.jsx)
+- [github : html5-qrcode-react-example](https://github.com/LukasBicus/html5-qrcode-react-example)
