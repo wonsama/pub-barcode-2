@@ -69,6 +69,7 @@ export const AdvancedExample: React.FC<IAdvancedExampleProps> = ({
         cameraId={selectedCameraId || cameraDevices[0].id}
       />
       <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
         onClick={() => {
           if (ref.current) {
             ref.current.pause();
@@ -78,6 +79,7 @@ export const AdvancedExample: React.FC<IAdvancedExampleProps> = ({
         Pause
       </button>
       <button
+        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
         onClick={() => {
           if (ref.current) {
             ref.current.resume();
